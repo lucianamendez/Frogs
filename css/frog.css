@@ -1,0 +1,184 @@
+body{
+	background-image:url(../img/background.png);
+
+}
+
+
+.titulo{
+	position:absolute;
+	z-index:180;
+	left:250px;
+	top:100px;
+}
+
+.lenguaScroll{
+	width:150px;
+	position:absolute;
+	right:40px;
+	top:30px;
+	transform:rotate(-32deg);
+}
+
+.lengua{
+	background-color:#FCC3C7;
+	height:10px;
+	width:10px;
+	border-radius:10px;
+	position:absolute;
+	right:140px;
+	top:90px;
+	z-index:-10;
+	transition:width 0.5s ease-in-out;
+	box-shadow: 1px 1px 1px black;
+	
+
+}
+
+.mosca{
+	width:50px;
+	position:absolute;
+	right:420px;
+	transform:rotate(180deg);
+	top:70px;
+	transition:visibility 0.1s ease-in-out;
+	cursor: pointer;
+
+}
+
+.mosca:hover ~ .lengua{
+	width:300px;	
+	
+}
+
+.hoja{
+	position:absolute;
+	z-index:-20;
+	right:0px;
+	top:0px;
+	
+	
+}
+
+.web{
+	position:absolute;
+	z-index:-30;
+	width:600px;
+	right:30px;
+	top:-80px;
+}
+
+
+.card-container {
+  cursor: pointer;
+  height: 250px;
+  perspective: 600;
+  position: relative;
+  top:600px;
+  left:600px;
+  width: 300px;
+
+
+}
+.card {
+  height: 100%;
+  position: absolute;
+  transform-style: preserve-3d;
+  transition: all 1s ease-in-out;
+  width: 100%;
+
+
+}
+.card:hover {
+  transform: rotateY(180deg);
+}
+.card .side {
+
+  backface-visibility: hidden;
+  border-radius: 6px;
+  height: 100%;
+  position: absolute;
+  overflow: hidden;
+  width: 100%;  
+  padding:-30px;
+}
+.card .back {
+
+  text-align: center;
+  transform: rotateY(180deg);
+  padding:-5px;
+}
+
+
+
+@keyframes slide {
+
+  100% {
+    left: 0px;
+    top: 0px;
+  }
+  75% {
+    top: 214px;
+    left: 100px;
+  }
+  50% {
+    top: 426px;
+    left: 0;
+  }
+    25% {
+    top: 638px;
+    left: 100px;
+  }
+    0% {
+    top: 850px;
+    left: 0px;
+  }
+}
+
+.ranaSaltando{
+	position:absolute;
+	left:0;
+	top:0;
+}
+.stage {
+  width: 200px;
+  position: relative;
+  top:0;
+  left:0;
+  z-index:50;
+  height:1000px;
+}
+.stage:hover .frog {
+  animation: slide 2s ease-in-out .5s infinite /*alternate*/;
+}
+.stage:active .frog {
+  animation-play-state: paused;
+}
+.frog {
+  height: 100px;
+  position: absolute;
+  z-index: 40;
+  top: 850px;
+  left: 0; 
+  width: 100px;
+}
+
+.pad{
+	width:100px;
+	position:absolute;
+}
+.pad2{
+	top: 214px;
+    left: 100px;
+}
+.pad3{
+	top: 426px;
+    left: 0;
+}
+.pad4{
+	top: 638px;
+    left: 100px;
+}
+.pad5{
+	top: 850px;
+    left: 0px;
+}
